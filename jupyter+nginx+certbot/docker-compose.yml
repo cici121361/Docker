@@ -1,0 +1,17 @@
+# https://github.com/koddr/example-static-website-docker-nginx-certbot
+
+version: "3.7"
+
+services: 
+    jupyter:
+        image: jupyter/base-notebook
+        ports: 
+            - 8890:8888
+    nginx: 
+        image: nginx:latest
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+            - ./nginx/conf.d:/etc/nginx/conf.d
+        ports: 
+            - 80:80
+            - 443:443

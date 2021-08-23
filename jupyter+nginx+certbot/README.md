@@ -10,4 +10,5 @@ git clone http://github.com/cici121361/Docker/jupyter+nginx+certbot
 ```{linux}
 docker-compose up
 ```
-5. 运行2.sh
+5. 配置nginx容器配置文件，将本地端口与域名重定向
+6. 运行2.sh
